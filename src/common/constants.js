@@ -18,5 +18,11 @@ export const TEXT_CONSTANTS = {
     LAST_NAME: "Last Name",
 
     EMAIL: "Email",
-    PHONE: "Phone"
+    PHONE: "Phone",
+
+    //Error Messages
+    EMPTY_FIRST_NAME_ERROR: "First name cannot be empty",
+    EMPTY_LAST_NAME_ERROR: "Last name cannot be empty",
+    INVALID_EMAIL_ERROR: "Invalid email",
+    INVALID_PHONE_ERROR: "Can only contains (), -, at least 1 digit"
 }

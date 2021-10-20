@@ -56,13 +56,6 @@ class MainNavigator extends React.PureComponent {
                     component={ScreenTwo}
                     options={({ navigation, route }) => ({
                         title: 'Contacts',
-                        headerRight: () => (
-                            <Text style={{ color: COLORS.ORANGE }} onPress={() => {
-                                console.log("Press Save");
-                            }}>
-                                {TEXT_CONSTANTS.SAVE}
-                            </Text>
-                        ),
                         headerLeft: () => (
                             <Text style={{ color: COLORS.ORANGE }} onPress={() => {
                                 navigation.goBack();

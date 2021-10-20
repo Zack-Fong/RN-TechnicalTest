@@ -30,3 +30,13 @@ export function shadowCopyObject(obj) {
 export function deepCopyObject(obj) {
     return JSON.parse(JSON.stringify(obj));
 }
+
+export function validatePhone(phone) {
+    let reg = /^(?=.*[0-9])[- ()0-9]+$/;
+    return (reg.test(phone));
+}
+
+export function validateEmail(email) {
+    let reg = /^([A-Za-z0-9_\-\.])+\@(?!(?:[A-Za-z0-9_\-\.]+\.)?([A-Za-z]{2,4})\.\2)([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+    return reg.test(email);
+}
