@@ -21,7 +21,8 @@ class MainNavigator extends React.PureComponent {
                     },
                     headerTitleStyle: {
                         fontWeight: 'bold',
-                    }
+                    },
+                    headerTitleAlign: 'center'
                 }}
             >
                 <MainStack.Screen

@@ -1,5 +1,5 @@
 import React from 'react';
-import { SafeAreaView, Alert, View, Text, TextInput, TouchableWithoutFeedback, Keyboard } from 'react-native';
+import { SafeAreaView, Alert, View, Text, TextInput, TouchableWithoutFeedback, Keyboard, Platform } from 'react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 
 import { TEXT_CONSTANTS } from '../common/constants';
@@ -137,7 +137,7 @@ class ScreenTwo extends React.Component {
                                         returnKeyType={"next"}
                                         editable={!this.state.isLoading}
                                         selectTextOnFocus={!this.state.isLoading}
-                                        style={{ borderWidth: 1, marginLeft: 10, marginRight: 10, marginTop: 10, marginBottom: 5, height: 30, borderColor: COLORS.LIGHT_GRAY }}
+                                        style={{ borderWidth: 1, marginLeft: 10, marginRight: 10, marginTop: 10, marginBottom: 5, height: 50, borderColor: COLORS.LIGHT_GRAY }}
                                         value={!isStringEmpty(this.state.tempFirstName) ? this.state.tempFirstName : (!isObjectEmpty(this.state.contact) ? " " + this.state.contact.firstName : "")}
                                         onChangeText={(firstName) => {
                                             this.setState({
@@ -185,7 +185,7 @@ class ScreenTwo extends React.Component {
                                         editable={!this.state.isLoading}
                                         selectTextOnFocus={!this.state.isLoading}
                                         ref={(input) => { this.lastNameTextInput = input; }}
-                                        style={{ borderWidth: 1, marginLeft: 10, marginRight: 10, marginTop: 5, marginBottom: 10, height: 30, borderColor: COLORS.LIGHT_GRAY }}
+                                        style={{ borderWidth: 1, marginLeft: 10, marginRight: 10, marginTop: 5, marginBottom: 10, height: 50, borderColor: COLORS.LIGHT_GRAY }}
                                         value={!isStringEmpty(this.state.tempLastName) ? this.state.tempLastName : (!isObjectEmpty(this.state.contact) ? " " + this.state.contact.lastName : "")}
                                         onChangeText={(lastName) => {
                                             this.setState({
@@ -208,9 +208,6 @@ class ScreenTwo extends React.Component {
                                                 })
                                             } else {
                                                 this.setState({
-                                                    contact: contact,
-                                                    tempLastName: null,
-
                                                     lastNameError: isStringEmpty(this.state.contact.lastName)
                                                 })
                                             }
@@ -240,7 +237,7 @@ class ScreenTwo extends React.Component {
                                         editable={!this.state.isLoading}
                                         selectTextOnFocus={!this.state.isLoading}
                                         ref={(input) => { this.emailTextInput = input; }}
-                                        style={{ borderWidth: 1, marginLeft: 10, marginRight: 10, marginTop: 10, marginBottom: 5, height: 30, borderColor: COLORS.LIGHT_GRAY }}
+                                        style={{ borderWidth: 1, marginLeft: 10, marginRight: 10, marginTop: 10, marginBottom: 5, height: 50, borderColor: COLORS.LIGHT_GRAY }}
                                         value={!isStringEmpty(this.state.tempEmail) ? this.state.tempEmail : (!isObjectEmpty(this.state.contact) && !isStringEmpty(this.state.contact.email) ? " " + this.state.contact.email : "")}
                                         onChangeText={(email) => {
                                             this.setState({
@@ -288,7 +285,7 @@ class ScreenTwo extends React.Component {
                                         ref={(input) => { this.phoneTextInput = input; }}
                                         editable={!this.state.isLoading}
                                         selectTextOnFocus={!this.state.isLoading}
-                                        style={{ borderWidth: 1, marginLeft: 10, marginRight: 10, marginTop: 5, marginBottom: 10, height: 30, borderColor: COLORS.LIGHT_GRAY }}
+                                        style={{ borderWidth: 1, marginLeft: 10, marginRight: 10, marginTop: 5, marginBottom: 10, height: 50, borderColor: COLORS.LIGHT_GRAY }}
                                         value={!isStringEmpty(this.state.tempPhone) ? this.state.tempPhone : (!isObjectEmpty(this.state.contact) && !isStringEmpty(this.state.contact.phone) ? " " + this.state.contact.phone : "")}
                                         onChangeText={(phone) => {
                                             this.setState({
