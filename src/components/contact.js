@@ -8,7 +8,7 @@ class Contact extends React.PureComponent {
     render() {
         return (
             <TouchableOpacity onPress={this.props.onPressContact}>
-                <View style={{ margin: 5, marginLeft: 10, flexDirection: 'row', alignItems: 'center' }}>
+                <View style={{ marginTop: this.props.firstContact ? 15 : 5, marginLeft: 10, marginRight: 5, marginBottom: 5, flexDirection: 'row', alignItems: 'center' }}>
                     <CircleComponent />
                     <Text style={{ marginLeft: 5 }}>
                         {this.props.item.firstName + " " + this.props.item.lastName}

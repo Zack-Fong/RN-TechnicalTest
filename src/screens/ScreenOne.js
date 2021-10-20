@@ -57,6 +57,7 @@ class ScreenOne extends React.Component {
         return (
             <Contact
                 item={item}
+                firstContact={isEqual(index, 0)}
                 showLine={!isArrayEmpty(this.props.contactsList) && this.props.contactsList.length > 1 && !isEqual(this.props.contactsList.length - 1, index)}
                 onPressContact={() => {
                     this.props.navigation.navigate("ScreenTwo", {
